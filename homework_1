@@ -1,0 +1,142 @@
+Homework #1
+
+1. Declare a variable using var and assign it a number. Change its value later in the code and log both values.
+Observation: both various are logged
+
+var age = 24; 
+console.log(age); 
+
+age = 56; 
+console.log(age)
+
+
+2. Declare a variable using let and assign it a string. Attempt to redeclare it, and observe the outcome. Explain why this happens.
+Observation: both values are loggled because let allows such a behavior. 
+
+let name = 'innocent'; 
+console.log(name); 
+
+name = 'juma'; 
+console.log(name)
+
+
+3. Declare a constant using const, assign it an array, and attempt to reassign the array to a new array. What error do you get, and why?
+
+Observation: I get a type error, because constants cannot be changed or reassigned. 
+
+const names = ['innocent', 'juma']; 
+console.log(names); 
+
+names = 'juma'; 
+console.log(names)
+
+4. What's the difference in scope between var, let, and const? Demonstrate this in a simple block of code.
+Var is used to declare a variable in local or global scope, let is only accessible in local scope, while const only declares local constant (unchangeable) variables. 
+
+
+Observation: the following code returns error because both age and mother variables cannot be accessed globally. 
+
+function names(){
+    if(true){
+        var names = ['innocent', 'juma']; 
+        let age = 20;
+        const mother = 'Alena'
+    }
+}
+console.log(names); 
+console.log(age)
+consloe.log(mother)
+
+
+5. Create a string variable and use the .length property to display its length.
+
+Observation: length property logs 8
+
+Var name = ‘innocent’
+console.log(name.length)
+
+6. Create a string and use the .charAt() method to return the character at a specific position.
+Observation: logs ‘o’
+
+var name = 'innocnet'; 
+console.log(name.charAt(3))
+
+7. Take a string and write code to display the first and last characters of the string using .charAt().
+
+
+const str = "Hello"; 
+
+const firstChar = str.charAt(0); // logs ‘H’
+const lastChar = str.charAt(str.length - 1);  // logs ‘o’
+
+
+8. Create a number variable and use the .toFixed() method to round it to 2 decimal places.
+
+Observation: //returns 21
+
+var age = 20.5
+console.log(age.toFixed()) 
+
+9. Create a number variable and use the .toExponential() method to express it in exponential notation.
+
+Observation:  logs 2.05e+1
+
+var age = 20.5
+
+console.log(age.toExponential()) //
+
+10. Create an array of numbers. Use the .map() method to multiply each number by 2 and log the result.
+var numbers = [5, 3, 4, 2, 6, 7]
+
+numbersMultiplied = numbers.map((number)=>number * 2)
+console.log(numbersMultiplied) // [ 10, 6, 8, 4, 12, 14 ]
+
+
+11. Use the .at() method to access the second-to-last element of an array of strings.
+
+var names = ['john', 'peter', 'andrew']; 
+
+console.log(names.at(-2)) //peter
+
+12. Create an array of words and join them into a single string using the .join() method.
+
+var words = ['john', 'peter', 'andrew']; 
+
+console.log(words.join(',')); // Outputs: john,peter,andrew
+
+
+13. Add an element to the end of an array using .push(), then remove the last element using .pop() and log the array after each operation.
+
+var words = ['john', 'peter', 'andrew']; 
+
+words.push('simon', 'petery')
+words.pop()
+console.log(words.join(',')); // Outputs: john,peter,andrew, simon
+
+14. Use prompt() to collect a user's name and store it in a variable. Ensure that the input is treated as a string.
+
+var userName = prompt("Please enter your name:");
+
+console.log("Hello, " + userName + "!");
+
+15. Write code to prompt the user for their age. Store the input as a number and use .toFixed() to display the age to 1 decimal place.
+
+var ageInput = prompt("Please enter your age:");
+var age = parseInt(ageInput); 
+
+console.log("You are, " + age + "!");
+
+16. Prompt the user to input a comma-separated list of items, then convert that input into an array and log the array.
+
+var hobbiesInput = prompt("Please enter your hobbies:");
+var hobbies = hobbiesInput.split(',')
+
+console.log(hobbies);
+
+17. Ask the user for a floating-point number and use toExponential() to display it in scientific notation.
+
+var weightInput = prompt("Please enter your weight:");
+var weight = parseFloat(weightInput);
+var sciNotWeight = weight.toExponential()
+
+console.log(sciNotWeight);
